@@ -1,6 +1,29 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import React from "react";
 import { nanoid } from "nanoid";
+
+// LOCAL STORAGE HOOK
+const useLocalStorage = (key, defaultValue) => {
+
+//state of local storage
+  const [value, setValue] = useState(() => {
+    const jsonValue = localStorage.getItem(key);
+    if (jsonValue != null) return JSON.parse(jsonValue);
+
+    if (typeof defaultValue === "function") {
+      return defaultValue();
+    } else {
+      return defaultValue;
+    }
+  });
+
+//updates local storage
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [key, value]);
+
+  return [value, setValue];
+}
 
 
 const BudgetsContext = React.createContext();
