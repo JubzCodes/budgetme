@@ -20,7 +20,7 @@ function App() {
           <span>Total (donut chart)</span>
         </div>
       </div>
-        <BudgetCards />
+        <BudgetCards  />
     </div>
   );
 }
