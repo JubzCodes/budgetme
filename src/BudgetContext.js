@@ -47,6 +47,13 @@ export const BudgetsProvider = ({ children }) => {
     });
   }
 
+// HANDLE DELETE EXPENSE
+  const deleteExpense = ({ id }) => {
+    setExpenses((prev) => {
+      return prev.filter((expense) => expense.id !== id);
+    });
+  }
+
   return (
     <BudgetsContext.Provider value={{}}>
       {children}
