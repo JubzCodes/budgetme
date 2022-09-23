@@ -1,15 +1,20 @@
 import './App.css';
+import { Stack, Button } from '@mui/material/';
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <h1>Budgets</h1>
-        <button>add budget</button>
-        <button>add expense</button>
+      <div className="hero">
         <div>
-          <span>Total</span>
+          <h1 className="title">Budget Me</h1>
+          <Stack spacing={2} direction="row">
+            <Button variant="contained">Add Budget</Button>
+            <Button variant="contained">Add Expense</Button>
+          </Stack>
         </div>
+          <div>
+            <span>Total (donut chart)</span>
+          </div>
       </div>
       <div>
         <div>
