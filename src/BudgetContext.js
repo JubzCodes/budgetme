@@ -35,8 +35,8 @@ export const useBudgets  = () => {
 export const BudgetsProvider = ({ children }) => {
 
 // BUGETS & EXPENSE STATE
-  const [budgets, setBudgets] = useState([]);
-  const [expenses, setExpenses] = useState([]);
+  const [budgets, setBudgets] = useLocalStorage("budgets", []);
+  const [expenses, setExpenses] = useLocalStorage("expenses", []);
 
 //DISPLAY SELECTED EXPENSES
   const getExpenses = (budgetId) => {
