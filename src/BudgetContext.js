@@ -20,6 +20,15 @@ export const BudgetsProvider = ({ children }) => {
     return expenses.filter((expense) => expense.budgetId === budgetId);
   }
 
+// HANDLE ADD BUDGET
+  const addBudget = ({ title, max }) => {
+    setBudgets((prev) => {
+      if (prev.find((budget) => budget.title === title)) {
+        return prev;
+      }
+      return [...prev, { id: nanoid(), title, max }];
+    });
+  }
 
 
   return (
