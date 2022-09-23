@@ -30,6 +30,16 @@ export const BudgetsProvider = ({ children }) => {
     });
   }
 
+// HANDLE ADD EXPENSE
+  const addExpense = ({ description, amount, budgetId })  => {
+    setExpenses((prev) => {
+      return [
+        ...prev,
+        { id: nanoid(), description, amount, budgetId },
+      ];
+    });
+  }
+
 
   return (
     <BudgetsContext.Provider value={{}}>
