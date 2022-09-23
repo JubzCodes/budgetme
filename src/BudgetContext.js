@@ -40,6 +40,12 @@ export const BudgetsProvider = ({ children }) => {
     });
   }
 
+// HANDLE DELETE BUDGET
+  const deleteBudget = ({ id }) => {
+    setBudgets((prev) => {
+      return prev.filter((budget) => budget.id !== id);
+    });
+  }
 
   return (
     <BudgetsContext.Provider value={{}}>
