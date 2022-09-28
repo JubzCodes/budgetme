@@ -45,6 +45,7 @@ export const BudgetsProvider = ({ children }) => {
 
 // HANDLE ADD BUDGET
   const addBudget = ({ title, max }) => {
+    console.log(title, max)
     setBudgets((prev) => {
       if (prev.find((budget) => budget.title === title)) {
         return prev;

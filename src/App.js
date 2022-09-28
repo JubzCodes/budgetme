@@ -2,9 +2,11 @@ import './App.css';
 import { Stack, Button } from '@mui/material/';
 import BudgetCards from './components/BudgetCards'
 import AddBudgetModal from './components/AddBudgetModal';
+import { useState } from 'react';
 
 function App() {
 
+  const [ budgetModal, setBudgetModal ] = useState(true)
 
   return (
     <div className="App">
@@ -21,7 +23,7 @@ function App() {
         </div>
       </div>
         <BudgetCards  />
-        <AddBudgetModal/>
+        <AddBudgetModal open={budgetModal} handleClose={()=> {setBudgetModal(false)}}/>
     </div>
   );
 }
