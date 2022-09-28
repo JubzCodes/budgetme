@@ -21,6 +21,8 @@ const AddBudgetModal = ({ open, handleClose}) => {
         max: parseFloat(amount),
       });
       handleClose();
+      setName("");
+      setAmount("");
     }
 
   return (
