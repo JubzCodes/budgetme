@@ -6,7 +6,8 @@ import { useState } from 'react';
 
 function App() {
 
-  const [ budgetModal, setBudgetModal ] = useState(true)
+
+  const [ budgetModal, setBudgetModal ] = useState(false)
 
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
         <div className='header'>
           <h1 className="title">Budget Me</h1>
           <Stack spacing={2} direction="row">
-            <Button variant="contained">Add Budget</Button>
+            <Button variant="contained" onClick={() => setBudgetModal(true)}>Add Budget</Button>
             <Button variant="contained">Add Expense</Button>
           </Stack>
         </div>

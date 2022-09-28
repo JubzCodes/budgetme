@@ -16,8 +16,6 @@ const AddBudgetModal = ({ open, handleClose}) => {
 //HANDLES ADD BUTTON
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(document.getElementsByName("name"));
-      console.log(name)
       addBudget({
         title: name,
         max: parseFloat(amount),
