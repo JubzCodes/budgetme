@@ -1,7 +1,7 @@
 import './App.css';
 import { Stack, Button } from '@mui/material/';
 import BudgetCards from './components/BudgetCards'
-
+import AddBudgetModal from './components/AddBudgetModal';
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
         </div>
       </div>
         <BudgetCards  />
+        <AddBudgetModal/>
     </div>
   );
 }

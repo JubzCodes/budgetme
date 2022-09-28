@@ -34,10 +34,10 @@ const BudgetCards = () => {
         <CardContent>
           <div className="card-title">
             <Typography gutterBottom variant="h5" component="div">
-              Title
+              Food
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Min/Max
+              $50/$100
             </Typography>
           </div>
           <BorderLinearProgress variant="determinate" value={50} />
@@ -55,10 +55,10 @@ const BudgetCards = () => {
         <CardContent>
           <div className="card-title">
             <Typography gutterBottom variant="h5" component="div">
-              Title
+              Clothes
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Min/Max
+              $50/$100
             </Typography>
           </div>
           <BorderLinearProgress variant="determinate" value={50} />
@@ -76,10 +76,10 @@ const BudgetCards = () => {
         <CardContent>
           <div className="card-title">
             <Typography gutterBottom variant="h5" component="div">
-              Title
+              Rent
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Min/Max
+              $50/$100
             </Typography>
           </div>
           <BorderLinearProgress variant="determinate" value={50} />
@@ -97,10 +97,10 @@ const BudgetCards = () => {
         <CardContent>
           <div className="card-title">
             <Typography gutterBottom variant="h5" component="div">
-              Title
+              Activities
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Min/Max
+              $50/$100
             </Typography>
           </div>
           <BorderLinearProgress variant="determinate" value={50} />
